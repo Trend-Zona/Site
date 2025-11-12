@@ -1,0 +1,31 @@
+/* Exemplo de como estilizar a barra de rolagem */
+
+/* Define a largura da barra de rolagem */
+::-webkit-scrollbar {
+  width: 10px; /* Largura da barra */
+}
+
+/* Define a cor e outros estilos da trilha (fundo) */
+::-webkit-scrollbar-track {
+  background: #4c083e; /* Cor do fundo */
+  border-radius: 2px; /* Borda arredondada */
+}
+
+/* Define a cor e outros estilos do polegar (parte que arrasta) */
+::-webkit-scrollbar-thumb {
+  background: #af2772; /* Cor do polegar */
+  border-radius: 2px; /* Borda arredondada */
+}
+
+/* Efeito ao passar o mouse sobre o polegar */
+::-webkit-scrollbar-thumb:hover {
+  background: #842361; /* Cor ao passar o mouse */
+}
+
+body {
+  background-color: #ffb6de;
+}
+
+h1, h2, h3, p {
+ color: #4C1208;
+}
