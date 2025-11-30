@@ -1,0 +1,56 @@
+/* MODO ESCURO ATIVADO */
+body.dark {
+    background-color: #1e1e1e;
+}
+
+/* textos */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p {
+    color: #ff72c4;
+}
+
+/* header */
+body.dark header {
+    background-color: #1e1e1e;
+}
+
+body.dark #dark-mode-toggle {
+   position: absolute;
+  right: 0px;       /* distancia do canto direito */
+  top: 61%;          /* centraliza verticalmente */
+  transform: translateY(-50%);
+  background: #f542ab;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 20px;
+}
+body.dark #dark-mode-toggle:hover {
+    background: #67083f;
+}
+
+/* Links*/
+body.dark a {
+    color: #ff72c4;
+}
+
+/* barra */
+body.dark #Header_Bar {
+    background-color: #3a0030;
+}
+
+
+body.dark .menu-btn {
+    background: #8a004f;
+    color: white;
+}
+
+
+/* footer */
+body.dark footer {
+    background-color: #222;
+}

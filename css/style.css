@@ -7,25 +7,152 @@
 
 /* Define a cor e outros estilos da trilha (fundo) */
 ::-webkit-scrollbar-track {
-  background: #4c083e; /* Cor do fundo */
+  background: #7c0063; /* Cor do fundo */
   border-radius: 2px; /* Borda arredondada */
 }
 
 /* Define a cor e outros estilos do polegar (parte que arrasta) */
 ::-webkit-scrollbar-thumb {
-  background: #af2772; /* Cor do polegar */
+  background: #fc5eb5; /* Cor do polegar */
   border-radius: 2px; /* Borda arredondada */
 }
 
 /* Efeito ao passar o mouse sobre o polegar */
 ::-webkit-scrollbar-thumb:hover {
-  background: #842361; /* Cor ao passar o mouse */
+  background: #af2772; /* Cor ao passar o mouse */
 }
 
+/*body Settings*/
 body {
-  background-color: #ffb6de;
+  background-color: #F89DB9;
 }
 
+/*Link Settings*/
+a {
+  color: #64002b;
+}
+
+
+/*Text Settings*/
 h1, h2, h3, p {
  color: #4C1208;
+  padding: 25px;
 }
+
+/* Header Settings*/
+
+header {
+  position: sticky;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  top: 0;
+  left: 0;
+  width: 100%;
+    transition: 
+    box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out,
+    transform 0.3s ease-in-out; /* deixa tudo suave */
+  z-index: 999;   /* garante que o header fique acima do conteúdo */
+   background-color:  #F89DB9;
+} 
+
+
+#dark-mode-toggle {
+   position: absolute;
+  right: 0px;       /* distancia do canto direito */
+  top: 61%;          /* centraliza verticalmente */
+  transform: translateY(-50%);
+  background: #4d1536;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#dark-mode-toggle:hover {
+    background: #67083f;
+}
+
+.menu-btn {
+  padding: 5px 5px;
+  background: #fc5cb9;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* remove sublinhado */
+  font-weight: bold;
+}
+
+header.is-sticky {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(0px); /* efeito suave */
+}
+
+#Header_Bar { 
+  background-color: #ff72c4;
+  padding: 5.5px;
+  a{margin-left: 50px;}
+}
+
+/*Sections Settings*/
+
+#sobre {
+  scroll-margin-top: 138px; /* altura do header */
+  display: flex;
+	text-align: center;
+	flex-direction: column;
+	align-items: center;
+  padding: 50px;
+  p {margin: 25px;}
+  a {padding-right: 1cm;
+  padding-left: 1cm;}
+}
+
+
+
+#visao {
+  scroll-margin-top: 138px; /* altura do header */
+  display: flex;
+	text-align: center;
+	flex-direction: column;
+	align-items: center;
+  padding: 50px;
+}
+
+
+
+#missao {
+  scroll-margin-top: 138px; /* altura do header */
+  display: flex;
+	text-align: center;
+	flex-direction: column;
+	align-items: center;
+  padding: 50px;
+}
+
+
+
+#valor {
+  scroll-margin-top: 138px; /* altura do header */
+  display: flex;
+	text-align: center;
+	flex-direction: column;
+	align-items: center;
+  padding: 50px;
+  padding-inline: 100px;
+}
+
+/*Footer*/
+
+footer{
+  display: flex;
+	text-align: center;
+	flex-direction: column;
+	align-items: center;
+  padding: 50px;
+}
+
+/*End*/

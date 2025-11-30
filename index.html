@@ -3,48 +3,53 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/darkmode_style.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Trend_Zona</title>
 </head>
 <body>
-	<section id="links">
-	<nav>
-		<a href="#"><img src="img/0.png" alt="Logo_TrendZona"></a>
-		<ul>
-			<li><a href="#topo">Sobre</a></li></li>
-			<li><a href="#sobre">Missão</a></li>
-			<li><a href="#materia">Visão</a></li>
-			<li><a href="#curiosidade">Valores</a></li>
-		</ul>
-	</nav>
+	<header>
+	<div class="logo"><a href="#"><img id="logo" src="img/0.png" alt="Logo_TrendZona"></a></div>
+
+
+	<button id="dark-mode-toggle">🌙</button> <!-- BOTÃO DE MODO ESCURO -->
+
+	<section id="Header_Bar">
+	<a href="#sobre" class="menu-btn">Sobre</a>
+	<a href="#missao" class="menu-btn">Missão</a>
+	<a href="#visao" class="menu-btn">Visão</a>
+	<a href="#valor" class="menu-btn">Valores</a>
 	</section>
-	<header id="topo">
+	</header>
+
+	<section id="sobre">
 		<h1>Sobre o Projeto</h1>
 		<p>Este projeto tem como foco principal dar visibilidade à musicalidade e às expressões artísticas das subcelebridades e artistas da favela do Jabaquara, em São Paulo, que frequentemente são ignorados pela grande mídia e pela indústria cultural dominante. 
  		A utilização de produtos para a Web tem como intuito espalhar para onde for possível as razões e motivações do grupo, alguns dos métodos a serem utilizados são posts interativos, conteúdo de bastidores e vida real dos artistas, podcasts com diálogos sobre a cena musical, um blog com informações sobre música e também,
   		quadros de trends virias para redes sociais. </p>
 		<div>
 			<p>As plataformas a serem utilizadas incluem:</p>
-			<a href="https://www.instagram.com/__trendzona?" target="_blank"><img src="img/1.png"></a>
-			<a href="https://www.tiktok.com/@__trendzona?_" target="_blank"><img src="img/2.png"></a>
-			<a href="https://spotify.link/ZuMNthLgQXb" target="_blank"><img src="img/3.png"></a>
+			<a href="https://www.instagram.com/__trendzona?" target="_blank" rel="noopener noreferrer"><img id="Icon" src="img/1.png"></a>
+			<a href="https://www.tiktok.com/@__trendzona?_" target="_blank" rel="noopener noreferrer"><img id="Icon2" src="img/2.png"></a>
+			<a href="https://spotify.link/ZuMNthLgQXb" target="_blank" rel="noopener noreferrer"><img id="Icon3" src="img/3.png"></a>
 		</div>
-	</header>
-	<section id="sobre">
+	</section>
+
+	<section id="missao">
 		<h2>Missão</h2>
 		<p>Valorizar a arte periférica, especialmente a do Jabaquara.
 		Transformar a percepção pública sobre quem são os verdadeiros protagonistas da cultura urbana.
 		Criar oportunidades reais de crescimento e representatividade para artistas locais, inspirando orgulho na comunidade.</p>
 		<a href="#" class="botao">Voltar</a>
 	</section>
-	<section id="materia">
+	<section id="visao">
 		<h2>Visão</h2>
 		<p>Ser reconhecida como a principal plataforma de influência musical nas redes, 
 			destacando-se pela velocidade, autenticidade, diversidade e pela capacidade de antecipar tendências que impulsionam a cultura jovem e digital.</p>
 		<a href="#" class="botao">Voltar</a>
 	</section>
-	<section id="curiosidade">
+	<section id="valor">
 		<h2>Nossos Valores</h2>
 		<p>O maior diferencial da marca é sua originalidade autêntica, mostrando a arte como ela é, obtendo conexão direta com o território:
 		 O projeto nasce e vive dentro do Jabaquara.
@@ -55,7 +60,47 @@
 	</section>
 	<footer>
 		<a href="#">Voltar</a>
-		<p>Desenvolvido por: Maria Carolina, Guilherme Rios, Sophia Marques, Valentina Moura, Sofia Datner</p>
+		<p>Desenvolvido por: Maria Carolina, Guilherme Rios, Sophie Marques, Valentina Moura, Sofia Datner</p>
 	</footer>
+<script>
+document.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+
+    if (window.scrollY > 20) {
+        header.classList.add('is-sticky');
+    } else {
+        header.classList.remove('is-sticky');
+    }
+});
+
+const toggle = document.getElementById('dark-mode-toggle');
+const logo = document.getElementById('logo');
+
+const Icon = document.getElementById('Icon')
+const Icon2 = document.getElementById('Icon2')
+const Icon3 = document.getElementById('Icon3')
+
+toggle.addEventListener('click', () => {
+
+    document.body.classList.toggle('dark');
+
+     // troca o texto / ícone
+    if (document.body.classList.contains('dark')) {
+        toggle.innerText = "☀️";  // modo claro
+        logo.src = "dark/0.png";
+
+		Icon.src = "dark/1.png";
+        Icon2.src = "dark/2.png";
+        Icon3.src = "dark/3.png";
+    } else {
+        toggle.innerText = "🌙";  // modo escuro
+        logo.src = "img/0.png";
+
+		Icon.src = "img/1.png";
+        Icon2.src = "img/2.png";
+        Icon3.src = "img/3.png";
+    }
+});;
+</script>
 </body>
 </html>
